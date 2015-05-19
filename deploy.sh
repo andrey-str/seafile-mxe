@@ -9,7 +9,7 @@ DEPLOYMENT_TEST_ZIP=seafile-dist.zip
 if [ ! -z $1 ] && [ $1 == "clean" ]; then
         echo "Cleaning deployment folder" 
 
-        if [ -d "./$DEPLOYMENT_PATH"  ]
+        if [ -d "./$DEPLOYMENT_PATH"  ]; then
                 rm -rf  $targetName
         fi
 
