@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <Product Name='Seafile' Id='A6B50001-338C-47C5-AB5F-8384084991A3' UpgradeCode='E3E28333-498B-4877-B583-CD633FF360C1'
+      Language='1033' Codepage='1252' Version='1.0.0' Manufacturer='seafile.com'>
+
+      <Package Id='*' Keywords='Installer' Description="Seafile applet Installer" Comments='Seafile is a registered trademark of seafile.com' Manufacturer='seafile.com' InstallerVersion='100' Languages='1033' Compressed='yes' SummaryCodepage='1252' />
+
+      <Media Id='1' Cabinet='package.cab' EmbedCab='yes' DiskPrompt="CD-ROM #1" />
+      
+      <Property Id='DiskPrompt' Value="Seafile Installation [1]" />
+
+        <Directory Id="TARGETDIR" Name='deployment'>
+          <Directory Id="ProgramFilesFolder" Name='PFiles'>
+            <Directory Id='Seafile' Name='Seafile'>
+              <Directory Id='INSTALLDIR' Name='bin'>
+
+                <Component Id="MainExecutable" Guid="*">
+                  <File Id="fil1AEE0C7526CF6CB7B0E96A71401B5DED" KeyPath="yes" DiskId='1' Source="deployment/seafile-applet.exe"/>
+                </Component>
+                <Component Id="cmp089D979B5A40A3DBBB26A6350CFA4754" Guid="*">
+                  <File Id="filED8D98669E6DACB9B3ADC583562B5530" Source="deployment/ccnet.exe"/>
+                  <File Id="filD6179FD097EC55D2EEE41E3D9C6A1354" Source="deployment/seaf-daemon.exe"/>
+                  <File Id="filBDAFA9A2D1B2F7A09AE33A534631D8DE" Source="deployment/icudt54.dll"/>
+                  <File Id="fil0D4440029BD414D87F6F0C16F2215D29" Source="deployment/icuin54.dll"/>
+                  <File Id="fil249368060A82EF365AE7677DC35B7AFC" Source="deployment/icuuc54.dll"/>
+                  <File Id="fil20B7D94A5F28418160753F5BAC7893C5" Source="deployment/libbz2.dll"/>
+                  <File Id="fil9CAE6002BBA8D5A3B4E82C6310F27ED0" Source="deployment/libccnet-0.dll"/>
+                  <File Id="filD986BB70E90B412417E61E7A7A651E10" Source="deployment/libcurl-4.dll"/>
+                  <File Id="fil3D5348201C61C235A26018C4C65B6747" Source="deployment/libeay32.dll"/>
+                  <File Id="fil0696D3028A42364C46F9B23F7D620B49" Source="deployment/libevent-2-0-5.dll"/>
+                  <File Id="filA5C096DFBE75B38CE18045A0CD000825" Source="deployment/libffi-6.dll"/>
+                  <File Id="fil1BA40B434D3D5E9B00D9CD466354D8F1" Source="deployment/libfreetype-6.dll"/>
+                  <File Id="filA62D4B20ABCF1FBD8224250CF977DC5E" Source="deployment/libgcc_s_sjlj-1.dll"/>
+                  <File Id="fil0826E7A70AD8BF0DC6EB7334760C3260" Source="deployment/libgcrypt-20.dll"/>
+                  <File Id="filB3096A68BEB654925FCC14F8204868EF" Source="deployment/libglib-2.0-0.dll"/>
+                  <File Id="fil8020B81145DFB7967CA353ACDD2C01F4" Source="deployment/libgmp-10.dll"/>
+                  <File Id="filA9C06D5B7607D57559832A38D810CE19" Source="deployment/libgnutls-28.dll"/>
+                  <File Id="fil9C4BDFA26C891961F7B8B9C59141C01A" Source="deployment/libgobject-2.0-0.dll"/>
+                  <File Id="filF6B962852D3C64146987C328D9B72E7F" Source="deployment/libgpg-error-0.dll"/>
+                  <File Id="fil951AFBD2C5B7D2FB77C868A0A97FEB3E" Source="deployment/libharfbuzz-0.dll"/>
+                  <File Id="filFA10B878FD33DC8DD32E3BA3EB1FB73E" Source="deployment/libhogweed-2-4.dll"/>
+                  <File Id="fil177A0D6420E41CDE7CDD468EE9FC40CA" Source="deployment/libiconv-2.dll"/>
+                  <File Id="fil99B4E0119211C50739F4A8A440EB4BCF" Source="deployment/libidn-11.dll"/>
+                  <File Id="fil4F559DB9A0C09CD73464F345FC88891D" Source="deployment/libintl-8.dll"/>
+                  <File Id="filD6BD8D4DB5111FFBFF980B1F26138430" Source="deployment/libjansson-4.dll"/>
+                  <File Id="filB5F7A6D3EF176B3DEF84E81B0BA0AB71" Source="deployment/libjpeg-9.dll"/>
+                  <File Id="fil8F65520CCE142D1070EC1A32918E6CDD" Source="deployment/libnettle-4-6.dll"/>
+                  <File Id="fil4FE20926FD90C3EFF7C33170B5EA9888" Source="deployment/libpcre16-0.dll"/>
+                  <File Id="filD8A9C1775CC3FBD3EFE362A38DCB4923" Source="deployment/libpcre-1.dll"/>
+                  <File Id="fil413BF77D1C45D56B29B20DB971748BE3" Source="deployment/libpng16-16.dll"/>
+                  <File Id="filE86B13F5E49058F95FA1EADBB05DD08B" Source="deployment/libseafile-0.dll"/>
+                  <File Id="fil548DBF83C16A5275979C86F248C1B824" Source="deployment/libsearpc-1.dll"/>
+                  <File Id="fil36BE204B6C4164A325778CAA7D5AF79A" Source="deployment/libsqlite3-0.dll"/>
+                  <File Id="filE4E3D629D2543885A141E3EB1EDE4DE0" Source="deployment/libssh2-1.dll"/>
+                  <File Id="fil0E267B6CC2F04845F2CD1A486C8309AF" Source="deployment/libstdc++-6.dll"/>
+                  <File Id="fil09EAD049F3F17FC37F2EEF0978940844" Source="deployment/libwinpthread-1.dll"/>
+                  <File Id="fil6CE6F6674DAED85EFD83100C9465DBC0" Source="deployment/Qt53D.dll"/>
+                  <File Id="fil7019FAE7D2CA353E3435A81EA93C0F37" Source="deployment/Qt53DQuick.dll"/>
+                  <File Id="fil9051F528FDC76A3CE63E6650733197C8" Source="deployment/Qt5Bluetooth.dll"/>
+                  <File Id="fil44E43EFFC6316509E74E5DC87EBABAA3" Source="deployment/Qt5CLucene.dll"/>
+                  <File Id="filF358EA87F53F675EE02B3CC6BFF21C6B" Source="deployment/Qt5Concurrent.dll"/>
+                  <File Id="fil78E164EBEDBD5B9A7E99E7E3B6CD2832" Source="deployment/Qt5Core.dll"/>
+                  <File Id="fil400D2F2A2E2B2E84FEFD3D919D81597C" Source="deployment/Qt5DBus.dll"/>
+                  <File Id="fil5CE12EEA361E7480E2723090A6F8BD50" Source="deployment/Qt5Declarative.dll"/>
+                  <File Id="fil084352300908DEF96FC2C33BE46DF847" Source="deployment/Qt5Gui.dll"/>
+                  <File Id="fil606B3C3CD6C86B21C84F02C2A1C5C273" Source="deployment/Qt5Help.dll"/>
+                  <File Id="fil58A6AC6B2FCD1EF13F222E6F18F044C9" Source="deployment/Qt5Location.dll"/>
+                  <File Id="fil2B0D22C6C86CE188682436FA89DF8AE9" Source="deployment/Qt5Multimedia.dll"/>
+                  <File Id="filCF47BC52B999C7B0C3DB4B05B652A594" Source="deployment/Qt5MultimediaWidgets.dll"/>
+                  <File Id="filD10B84B9376D3FB7F0CEE992484870A0" Source="deployment/Qt5Network.dll"/>
+                  <File Id="fil85B25B46C501E483C48EC2A2A90AE998" Source="deployment/Qt5Nfc.dll"/>
+                  <File Id="filF10F44C8737C8A37070026F002226BCB" Source="deployment/Qt5OpenGL.dll"/>
+                  <File Id="fil465B24846AE090DB0D018886735D2243" Source="deployment/Qt5Positioning.dll"/>
+                  <File Id="fil047B026EA30A001E8862C8A7EC1B63DB" Source="deployment/Qt5PrintSupport.dll"/>
+                  <File Id="fil20FE055B901028CC5C5A3BFCCEEFF62F" Source="deployment/Qt5PublishSubscribe.dll"/>
+                  <File Id="filF3010B1D8CD71877B9C219B9F16DEF02" Source="deployment/Qt5Qml.dll"/>
+                  <File Id="filB839B4344B0F4C56F6B46E30F06F1C07" Source="deployment/Qt5Quick.dll"/>
+                  <File Id="fil86E3D2D64E1B65A5452BCFFE1246C034" Source="deployment/Qt5QuickParticles.dll"/>
+                  <File Id="filEA32840CCD7387CA2C514A364BCC00E7" Source="deployment/Qt5QuickTest.dll"/>
+                  <File Id="filFCAC1C69BE93E777FBB5FF60B4670001" Source="deployment/Qt5QuickWidgets.dll"/>
+                  <File Id="fil04D2A7A65F5F2CBFDDED0673DF1BDDE3" Source="deployment/Qt5Script.dll"/>
+                  <File Id="filE61564A7ABFC0FBC771B8D3560AC3D57" Source="deployment/Qt5ScriptTools.dll"/>
+                  <File Id="filC70289009179111A9AA09C9277DEEE88" Source="deployment/Qt5Sensors.dll"/>
+                  <File Id="filC63287FFE34BF11B00E4762D5D429BD9" Source="deployment/Qt5SerialPort.dll"/>
+                  <File Id="fil123E0794D8B3747C9AADF1D975F3EF82" Source="deployment/Qt5ServiceFramework.dll"/>
+                  <File Id="filD291E028AB4076BDC8FF575DBBA2A4D0" Source="deployment/Qt5Sql.dll"/>
+                  <File Id="fil4DA21F5C899FF025D9C9671D500B5A59" Source="deployment/Qt5Svg.dll"/>
+                  <File Id="fil243AF70BF950E4124EEF2840B8D990B9" Source="deployment/Qt5SystemInfo.dll"/>
+                  <File Id="filBD97B746FEB266EDA5EEC8279E83E8B5" Source="deployment/Qt5Test.dll"/>
+                  <File Id="fil017465B45EE9CB9B828F892CFC351153" Source="deployment/Qt5WebChannel.dll"/>
+                  <File Id="filCA53047E047CD3AC5800EF3E7F4D00C0" Source="deployment/Qt5WebKit.dll"/>
+                  <File Id="filC63352CCF91D78DA53F62A9A3D74A26C" Source="deployment/Qt5WebKitWidgets.dll"/>
+                  <File Id="filE3906719BC3371645FDCF5576F80BA93" Source="deployment/Qt5WebSockets.dll"/>
+                  <File Id="filA0094D23CAF4D6B0700F64019A6E12E3" Source="deployment/Qt5Widgets.dll"/>
+                  <File Id="fil00C07506271B4E1A9BBDEA0CE8A8AFFE" Source="deployment/Qt5WinExtras.dll"/>
+                  <File Id="fil7DA1DEAA35917A5625446DB3AE2938B5" Source="deployment/Qt5Xlsx.dll"/>
+                  <File Id="fil53950170A12424A4F2FED3ABF0170BC2" Source="deployment/Qt5Xml.dll"/>
+                  <File Id="fil64126B6F2B9A0D6F98A260880E083838" Source="deployment/Qt5XmlPatterns.dll"/>
+                  <File Id="filE167635864424765DA256B3CD45920F6" Source="deployment/seafile_ca.qm"/>
+                  <File Id="filA1AFD3348C9855FFAC893F81644407FA" Source="deployment/seafile_cs_CZ.qm"/>
+                  <File Id="fil9C318560257CC836C01A8790DBC081F0" Source="deployment/seafile_de_DE.qm"/>
+                  <File Id="fil28E39FC3D493C3C4267A37BEB0AFE87A" Source="deployment/seafile_el_GR.qm"/>
+                  <File Id="fil2FB937C8A24270D558132BB909C7FA0A" Source="deployment/seafile_en.qm"/>
+                  <File Id="fil0B01BAD861A019463F4190718B2F54C6" Source="deployment/seafile_es_AR.qm"/>
+                  <File Id="filF82A3A919E067F8746EE87147ECB1390" Source="deployment/seafile_es_MX.qm"/>
+                  <File Id="fil022E00F1E30D13E2BE28573851C186C9" Source="deployment/seafile_es.qm"/>
+                  <File Id="filA69F7E2D30D817E6D377C6773F035F01" Source="deployment/seafile_fr_FR.qm"/>
+                  <File Id="filDB9EA7FD0F43E419BBAF4ADB843EF9C8" Source="deployment/seafile_he_IL.qm"/>
+                  <File Id="filCCF2F29697167E3A213E52500B034991" Source="deployment/seafile_hu_HU.qm"/>
+                  <File Id="filCF4CDC19D909299248E59E62B02BC166" Source="deployment/seafile_is.qm"/>
+                  <File Id="fil728BEE25711AA5230F7675C74B875992" Source="deployment/seafile_it.qm"/>
+                  <File Id="fil62DB542D698E3A65C3E6953CA630412E" Source="deployment/seafile_ja.qm"/>
+                  <File Id="fil45AC4FDB26561E8E2011FA66CC7E853F" Source="deployment/seafile_ko_KR.qm"/>
+                  <File Id="fil8FF032E2B0DC1973509F74058CC190D7" Source="deployment/seafile_lv.qm"/>
+                  <File Id="fil49E89D48D1395969FA27F793A02CBCA0" Source="deployment/seafile_nb_NO.qm"/>
+                  <File Id="filCE73E927DA5B4D317377B3F779690ACB" Source="deployment/seafile_nl_BE.qm"/>
+                  <File Id="filF44FB5D9700199CBC248D4D3789F1CA6" Source="deployment/seafile_nl_NL.qm"/>
+                  <File Id="fil5DFA14071F3D8F8A1DDC7D683DE99222" Source="deployment/seafile_pl_PL.qm"/>
+                  <File Id="fil50648035115A1F49F8994BC3A0991E43" Source="deployment/seafile_pt_BR.qm"/>
+                  <File Id="filDBCBA1E58B5009FDD998705F74E93880" Source="deployment/seafile_pt_PT.qm"/>
+                  <File Id="fil1A760C68B0F1DEFED71E8E91BA0573FD" Source="deployment/seafile_ru.qm"/>
+                  <File Id="fil169B99F08854B5E26176B8418CAA7455" Source="deployment/seafile_sk_SK.qm"/>
+                  <File Id="filF4DB23A9E55BD2155B90AE0713262718" Source="deployment/seafile_sv.qm"/>
+                  <File Id="filBECE023F3615329970E8D93BFD266BB9" Source="deployment/seafile_tr.qm"/>
+                  <File Id="filD49E9C91B173E836565E6585D8BF7494" Source="deployment/seafile_uk.qm"/>
+                  <File Id="fil74A5A1104CA570BD28E16D3EAA4E582B" Source="deployment/seafile_zh_CN.qm"/>
+                  <File Id="fil4C68D56AF2FC70AFBDE0D3DC95B459FE" Source="deployment/seafile_zh_TW.qm"/>
+                  <File Id="fil20F58224510C08851B4622A4FBA2F3E7" Source="deployment/ssleay32.dll"/>
+                  <File Id="filC79EE5ED1A9FCB6E4D640136C5354ED3" Source="deployment/zlib1.dll"/>
+
+                </Component>
+
+                <Directory Id='dir5A9A0487B6616F8F4AC9305DF4FB9D2E_imageformats' Name='imageformats'>
+
+                  <Component Id="cmpC12BC42553BEB2680140CFB53F4B5A52" Guid="*">
+                    <File Id="fil55B03549E99A1DC06A206CCD0F9EE1F9" Source="deployment/imageformats/qdds.dll"/>
+                    <File Id="fil3F24958D580D9D6438ADEED2799C1620" Source="deployment/imageformats/qgif.dll"/>                  
+                    <File Id="filDDBB02B029C6CE0B795722745C2B24F6" Source="deployment/imageformats/qicns.dll"/>                  
+                    <File Id="fil2F4E3BB700146D7CB50794217631D71C" Source="deployment/imageformats/qico.dll"/>                  
+                    <File Id="filFEF1A973F90E2ABF771BD3F602333851" Source="deployment/imageformats/qjp2.dll"/>                  
+                    <File Id="filE73FAE84425016DF4DB33DC7EFB0B443" Source="deployment/imageformats/qjpeg.dll"/>                  
+                    <File Id="fil5343DFF3742704A96C07C5F0B3CF29B5" Source="deployment/imageformats/qmng.dll"/>                  
+                    <File Id="filEBDB8D3458B23408249509FC4092B33B" Source="deployment/imageformats/qsvg.dll"/>                  
+                    <File Id="fil49D6A849D7E91FC96A156B26D27CE506" Source="deployment/imageformats/qtga.dll"/>                  
+                    <File Id="fil79598E411AA6852A037000EAC51396EC" Source="deployment/imageformats/qtiff.dll"/>                  
+                    <File Id="fil093BE85BC2D039ED25AB36D47983D923" Source="deployment/imageformats/qwbmp.dll"/>                  
+                    <File Id="filAD2E7F851F7784424F0FB8BEF203BA02" Source="deployment/imageformats/qwebp.dll"/>
+                  </Component>
+
+                </Directory>
+
+                <Directory Id="dirB830F8CCA3CB73E3F119995ECF9A95E0_platforms" Name="platforms">
+                  <Component Id="cmp178DA943E79BE1653F3EA13D862639D9" Guid="*">
+                    <File Id="filC0C3B2774345C80CED02FB1C21A75D9A" Source="deployment/platforms/qminimal.dll"/>
+                    <File Id="fil00069EB5316C911CCB85FA1FB2A5BBC3" Source="deployment/platforms/qwindows.dll"/>
+                  </Component>
+
+                </Directory>
+
+
+              </Directory>
+            </Directory>
+          </Directory>  
+        </Directory>
+
+      <Feature Id='Complete' Level='1'>
+        <ComponentRef Id='MainExecutable' />
+        <ComponentRef Id='cmp089D979B5A40A3DBBB26A6350CFA4754' />
+        <ComponentRef Id='cmpC12BC42553BEB2680140CFB53F4B5A52' />
+        <ComponentRef Id='cmp178DA943E79BE1653F3EA13D862639D9' />        
+      </Feature>
+
+  </Product>
+</Wix>
+<!-- generated with msitools 0.93 -->
+<!-- msitools/bin/wixl-heat -p deployment/ -->
+

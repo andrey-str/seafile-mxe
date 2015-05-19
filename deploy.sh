@@ -60,20 +60,48 @@ $PREFIX/bin/libjpeg-9.dll
 $PREFIX/bin/ccnet.exe
 $PREFIX/bin/seaf-daemon.exe
 $PREFIX/bin/seafile-applet.exe
+$PREFIX/qt5/bin/Qt53D.dll
+$PREFIX/qt5/bin/Qt53DQuick.dll
+$PREFIX/qt5/bin/Qt5Bluetooth.dll
+$PREFIX/qt5/bin/Qt5CLucene.dll
+$PREFIX/qt5/bin/Qt5Concurrent.dll
 $PREFIX/qt5/bin/Qt5Core.dll
+$PREFIX/qt5/bin/Qt5DBus.dll
+$PREFIX/qt5/bin/Qt5Declarative.dll
 $PREFIX/qt5/bin/Qt5Gui.dll
-$PREFIX/qt5/bin/Qt5Network.dll
+$PREFIX/qt5/bin/Qt5Help.dll
+$PREFIX/qt5/bin/Qt5Location.dll
 $PREFIX/qt5/bin/Qt5Multimedia.dll
 $PREFIX/qt5/bin/Qt5MultimediaWidgets.dll
-$PREFIX/qt5/bin/Qt5PrintSupport.dll
+$PREFIX/qt5/bin/Qt5Network.dll
+$PREFIX/qt5/bin/Qt5Nfc.dll
 $PREFIX/qt5/bin/Qt5OpenGL.dll
+$PREFIX/qt5/bin/Qt5Positioning.dll
+$PREFIX/qt5/bin/Qt5PrintSupport.dll
+$PREFIX/qt5/bin/Qt5PublishSubscribe.dll
 $PREFIX/qt5/bin/Qt5Qml.dll
 $PREFIX/qt5/bin/Qt5Quick.dll
+$PREFIX/qt5/bin/Qt5QuickParticles.dll
+$PREFIX/qt5/bin/Qt5QuickTest.dll
+$PREFIX/qt5/bin/Qt5QuickWidgets.dll
+$PREFIX/qt5/bin/Qt5Script.dll
+$PREFIX/qt5/bin/Qt5ScriptTools.dll
+$PREFIX/qt5/bin/Qt5Sensors.dll
+$PREFIX/qt5/bin/Qt5SerialPort.dll
+$PREFIX/qt5/bin/Qt5ServiceFramework.dll
 $PREFIX/qt5/bin/Qt5Sql.dll
-$PREFIX/qt5/bin/Qt5WebKitWidgets.dll
+$PREFIX/qt5/bin/Qt5Svg.dll
+$PREFIX/qt5/bin/Qt5SystemInfo.dll
+$PREFIX/qt5/bin/Qt5Test.dll
+$PREFIX/qt5/bin/Qt5WebChannel.dll
 $PREFIX/qt5/bin/Qt5WebKit.dll
-$PREFIX/qt5/bin/Qt5Widgets.dll"
-
+$PREFIX/qt5/bin/Qt5WebKitWidgets.dll
+$PREFIX/qt5/bin/Qt5WebSockets.dll
+$PREFIX/qt5/bin/Qt5Widgets.dll
+$PREFIX/qt5/bin/Qt5WinExtras.dll
+$PREFIX/qt5/bin/Qt5Xlsx.dll
+$PREFIX/qt5/bin/Qt5Xml.dll
+$PREFIX/qt5/bin/Qt5XmlPatterns.dll"
 # directories to copy
 dirs="$PREFIX/qt5/plugins/imageformats/
 $PREFIX/qt5/plugins/platforms/"
@@ -102,6 +130,7 @@ done
 cp $resources "$DEPLOYMENT_PATH/"
 
 # prepeare installer ...
+msitools/bin/wixl -v deployment.wxs
 
 # test zipping
 
@@ -109,4 +138,4 @@ if [ -e "$DEPLOYMENT_TEST_ZIP" ]; then
 	rm "$DEPLOYMENT_TEST_ZIP"
 fi
 
-zip -r $DEPLOYMENT_TEST_ZIP "$DEPLOYMENT_PATH"
+#zip -r $DEPLOYMENT_TEST_ZIP "$DEPLOYMENT_PATH"
