@@ -53,7 +53,7 @@ fi
 #make qt5 qtwebkit glib jansson pthreads glib libevent curl jansson openssl sqlite libevent
 
 
-exit 0
+#exit 0
 echo "Prepearing MSITOOLS packages.."
 
 cd ~/dev
